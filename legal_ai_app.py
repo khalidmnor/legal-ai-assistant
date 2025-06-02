@@ -69,7 +69,7 @@ def make_api_request(prompt, system_prompt="You are a helpful legal AI assistant
     }
     
     data = {
-        "model": "openai/gpt-4o-mini",
+        "model": "deepseek/deepseek-r1-0528:free",
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt}
