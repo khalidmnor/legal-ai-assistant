@@ -198,7 +198,9 @@ if function_choice == "Contract Analysis & Review":
     
     if st.button("🔍 Analyze Contract", type="primary"):
         if contract_text and contract_text.strip():
-            system_prompt = f"""You are an expert legal contract analyst. Analyze the provided contract with focus on {analysis_type.lower()}. 
+            system_prompt = f"""
+            You are an expert legal contract analyst. 
+            Analyze the provided contract with focus on {analysis_type.lower()}. 
             Pay special attention to: {', '.join(focus_areas) if focus_areas else 'all standard contract provisions'}.
             This appears to be a {contract_type.lower()} contract.
             
@@ -257,7 +259,9 @@ elif function_choice == "Legal Document Drafting":
     
     if st.button("📋 Generate Document", type="primary"):
         if document_details.strip():
-            system_prompt = f"""You are an expert legal document drafter. Create a comprehensive {document_type} based on the provided requirements.
+            system_prompt = f"""
+            You are an expert legal document drafter. 
+            Create a comprehensive {document_type} based on the provided requirements.
             
             Include standard legal provisions appropriate for this document type, considering the jurisdiction: {jurisdiction if jurisdiction else 'general'}.
             
@@ -333,7 +337,9 @@ elif function_choice == "Case Law Research Assistant":
     
     if st.button("🔎 Research Cases", type="primary"):
         if legal_issue.strip():
-            system_prompt = f"""You are an expert Malaysia legal researcher. Research and provide information about relevant case law for the given legal issue.
+            system_prompt = f"""
+            You are an expert Malaysia legal researcher. 
+            Research and provide information about relevant case law for the given legal issue.
             
             Focus on: {', '.join(jurisdiction_filter) if jurisdiction_filter else 'all jurisdictions'}
             Case type: {case_type}
@@ -404,7 +410,8 @@ elif function_choice == "Legal Memorandum Generator":
     
     if st.button("📄 Generate Memorandum", type="primary"):
         if all([memo_subject, facts, legal_question]):
-            system_prompt = f"""You are an expert legal writer creating a professional legal memorandum. 
+            system_prompt = f"""
+            You are an expert legal writer creating a professional legal memorandum. 
             
             Create a {memo_type.lower()} with {analysis_depth.lower()} level of detail.
             Priority: {priority}
@@ -493,7 +500,9 @@ elif function_choice == "Regulatory Compliance Checker":
     
     if st.button("🔍 Check Compliance", type="primary"):
         if business_description.strip():
-            system_prompt = f"""You are an expert regulatory compliance consultant. Analyze the provided business description for compliance requirements in the {industry} sector.
+            system_prompt = f"""
+            You are an expert regulatory compliance consultant. 
+            Analyze the provided business description for compliance requirements in the {industry} sector.
             
             Consider:
             - Business size: {business_size}
